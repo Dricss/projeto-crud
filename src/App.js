@@ -1,25 +1,15 @@
-import logo from './logo.svg';
+// Importando o CSS
 import './App.css';
 
+// Importando o componente formulário
+import Formulario from './Formulario'
+
+// Componente
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Formulario />
   );
 }
 
+// Exportando o componente
 export default App;
