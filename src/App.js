@@ -4,10 +4,16 @@ import './App.css';
 // Importando o componente formulário
 import Formulario from './Formulario'
 
+// Importando o Componente Tabela
+import Tabela from './Tabela'
+
 // Componente
 function App() {
   return (
-    <Formulario />
+    <div>
+      <Formulario />
+      <Tabela />
+    </div>
   );
 }
 
