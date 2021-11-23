@@ -15,11 +15,14 @@ function App() {
 
   // useState
   const [btnCadastrar, setBtnCadastrar] = useState(true);
+  const [nome, setNome] = useState('');
+  const [idade, setIdade] = useState('');
+  const [cidade, setCidade] = useState('');
 
   // Retorno
   return (
     <div>
-      <Formulario btnCadastrar={btnCadastrar} />
+      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} />
       <Tabela />
     </div>
   );

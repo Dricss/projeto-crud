@@ -1,11 +1,11 @@
 // Componente
-function Formulario({btnCadastrar}){
+function Formulario({btnCadastrar, setNome, setIdade, setCidade}){
 
     return(
         <form>
-            <input type='text' placeholder='Nome' className='form-control' />
-            <input type='text' placeholder='Idade' className='form-control' />
-            <input type='text' placeholder='Cidade' className='form-control' />
+            <input type='text' placeholder='Nome' className='form-control' onChange={e => setNome(e.target.value)} />
+            <input type='text' placeholder='Idade' className='form-control' onChange={e => setIdade(e.target.value)} />
+            <input type='text' placeholder='Cidade' className='form-control' onChange={e => setCidade(e.target.value)} />
 
             {
                 btnCadastrar
