@@ -1,5 +1,5 @@
 // Componente
-function Formulario(){
+function Formulario({btnCadastrar}){
 
     return(
         <form>
@@ -7,10 +7,18 @@ function Formulario(){
             <input type='text' placeholder='Idade' className='form-control' />
             <input type='text' placeholder='Cidade' className='form-control' />
 
-            <input type='button' value='Cadastrar' className='btn btn-primary' />
-            <input type='button' value='Alterar' className='btn btn-secondary' />
-            <input type='button' value='Excluir' className='btn btn-danger' />
-            <input type='button' value='Cancelar' className='btn btn-sucess' />
+            {
+                btnCadastrar
+                ?
+                <input type='button' value='Cadastrar' className='btn btn-primary' />
+                :
+                <div>
+                    <input type='button' value='Alterar' className='btn btn-secondary' />
+                    <input type='button' value='Excluir' className='btn btn-danger' />
+                    <input type='button' value='Cancelar' className='btn btn-sucess' />
+                </div>
+            }
+
         </form>
     )
 

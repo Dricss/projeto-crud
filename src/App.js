@@ -1,3 +1,6 @@
+// Hooks
+import { useState } from 'react';
+
 // Importando o CSS
 import './App.css';
 
@@ -9,9 +12,14 @@ import Tabela from './Tabela'
 
 // Componente
 function App() {
+
+  // useState
+  const [btnCadastrar, setBtnCadastrar] = useState(true);
+
+  // Retorno
   return (
     <div>
-      <Formulario />
+      <Formulario btnCadastrar={btnCadastrar} />
       <Tabela />
     </div>
   );
