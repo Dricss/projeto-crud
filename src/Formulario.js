@@ -1,5 +1,5 @@
 // Componente
-function Formulario({btnCadastrar, setNome, setIdade, setCidade}){
+function Formulario({btnCadastrar, setNome, setIdade, setCidade, cadastrar}){
 
     return(
         <form>
@@ -10,7 +10,7 @@ function Formulario({btnCadastrar, setNome, setIdade, setCidade}){
             {
                 btnCadastrar
                 ?
-                <input type='button' value='Cadastrar' className='btn btn-primary' />
+                <input type='button' value='Cadastrar' className='btn btn-primary' onClick={cadastrar}/>
                 :
                 <div>
                     <input type='button' value='Alterar' className='btn btn-secondary' />

@@ -18,11 +18,18 @@ function App() {
   const [nome, setNome] = useState('');
   const [idade, setIdade] = useState('');
   const [cidade, setCidade] = useState('');
+  const [vetor, setVetor] = useState([]);
+
+  // Função para Cadastrat
+  const cadastrar = () => {
+    let obj = {'nome':nome, 'idade':idade, 'cidade':cidade}
+    setVetor([...vetor, obj])
+  }
 
   // Retorno
   return (
     <div>
-      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} />
+      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} />
       <Tabela />
     </div>
   );
