@@ -3,9 +3,9 @@ function Formulario({btnCadastrar, setNome, setIdade, setCidade, cadastrar, nome
 
     return(
         <form>
-            <input type='text' placeholder='Nome' className='form-control' onChange={e => setNome(e.target.value)} />
-            <input type='text' placeholder='Idade' className='form-control' onChange={e => setIdade(e.target.value)} />
-            <input type='text' placeholder='Cidade' className='form-control' onChange={e => setCidade(e.target.value)} />
+            <input type='text' placeholder='Nome' value={nome} className='form-control' onChange={e => setNome(e.target.value)} />
+            <input type='text' placeholder='Idade' value={idade} className='form-control' onChange={e => setIdade(e.target.value)} />
+            <input type='text' placeholder='Cidade' value={cidade} className='form-control' onChange={e => setCidade(e.target.value)} />
 
             {
                 btnCadastrar
