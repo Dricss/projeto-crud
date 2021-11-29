@@ -24,12 +24,16 @@ function App() {
   const cadastrar = () => {
     let obj = {'nome':nome, 'idade':idade, 'cidade':cidade}
     setVetor([...vetor, obj])
+
+    setNome('');
+    setIdade('');
+    setCidade('');
   }
 
   // Retorno
   return (
     <div>
-      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} />
+      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} nome={nome} idade={idade} cidade={cidade} />
       <Tabela vetor={vetor} />
     </div>
   );

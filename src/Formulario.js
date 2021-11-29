@@ -1,5 +1,5 @@
 // Componente
-function Formulario({btnCadastrar, setNome, setIdade, setCidade, cadastrar}){
+function Formulario({btnCadastrar, setNome, setIdade, setCidade, cadastrar, nome, idade, cidade}){
 
     return(
         <form>
