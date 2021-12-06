@@ -14,6 +14,7 @@ import Tabela from './Tabela'
 function App() {
 
   // useState
+  const [indiceVetor, setIndiceVetor] = useState('');
   const [btnCadastrar, setBtnCadastrar] = useState(true);
   const [nome, setNome] = useState('');
   const [idade, setIdade] = useState('');
@@ -30,11 +31,21 @@ function App() {
     setCidade('');
   }
 
+  // Função para selecionar o usuário
+  const selecionar = (indice) => {
+    setIndiceVetor(indice);
+    setNome(vetor[indice].nome);
+    setIdade(vetor[indice].idade);
+    setCidade(vetor[indice].cidade)
+
+    setBtnCadastrar(false)
+  }
+
   // Retorno
   return (
     <div>
       <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} nome={nome} idade={idade} cidade={cidade} />
-      <Tabela vetor={vetor} />
+      <Tabela vetor={vetor} selecionar={selecionar} />
     </div>
   );
 }
