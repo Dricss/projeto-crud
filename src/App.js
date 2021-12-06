@@ -41,11 +41,24 @@ function App() {
     setBtnCadastrar(false)
   }
 
+  // Função para alterar os dados
+  const alterar = () => {
+    let obj = {'nome':nome, 'idade':idade, 'cidade':cidade}
+    let copiaVetor = [...vetor];
+    copiaVetor[indiceVetor] = obj
+    setVetor(copiaVetor);
+
+    setNome('');
+    setCidade('');
+    setIdade('');
+    setBtnCadastrar(true)
+  }
+
   // Retorno
   return (
     <div>
-      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} nome={nome} idade={idade} cidade={cidade} />
-      <Tabela vetor={vetor} selecionar={selecionar} />
+      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} nome={nome} idade={idade} cidade={cidade} alterar={alterar} />
+      <Tabela vetor={vetor} selecionar={selecionar}/>
     </div>
   );
 }
