@@ -66,10 +66,18 @@ function App() {
     setBtnCadastrar(true);
   }
 
+  // Função Cancelar
+  const cancelar = () => {
+    setNome('')
+    setIdade('');
+    setCidade('')
+    setBtnCadastrar(true)
+  }
+
   // Retorno
   return (
     <div>
-      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} nome={nome} idade={idade} cidade={cidade} alterar={alterar} remover={remover} />
+      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} nome={nome} idade={idade} cidade={cidade} alterar={alterar} remover={remover} cancelar={cancelar} />
       <Tabela vetor={vetor} selecionar={selecionar}/>
     </div>
   );

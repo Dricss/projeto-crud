@@ -1,5 +1,5 @@
 // Componente
-function Formulario({btnCadastrar, setNome, setIdade, setCidade, cadastrar, nome, idade, cidade, alterar, remover}){
+function Formulario({btnCadastrar, setNome, setIdade, setCidade, cadastrar, nome, idade, cidade, alterar, remover, cancelar}){
 
     return(
         <form>
@@ -15,7 +15,7 @@ function Formulario({btnCadastrar, setNome, setIdade, setCidade, cadastrar, nome
                 <div>
                     <input type='button' value='Alterar' className='btn btn-secondary' onClick={alterar} />
                     <input type='button' value='Excluir' className='btn btn-danger' onClick={remover}/>
-                    <input type='button' value='Cancelar' className='btn btn-sucess' />
+                    <input type='button' value='Cancelar' className='btn btn-sucess' onClick={cancelar}/>
                 </div>
             }
 
