@@ -51,13 +51,25 @@ function App() {
     setNome('');
     setCidade('');
     setIdade('');
-    setBtnCadastrar(true)
+    setBtnCadastrar(true);
+  }
+  
+  // Função para remover
+  const remover = () => {
+    let copiaVetor = [...vetor];
+    copiaVetor.splice(indiceVetor, 1)
+    setVetor(copiaVetor)
+
+    setNome('');
+    setIdade('');
+    setCidade('');
+    setBtnCadastrar(true);
   }
 
   // Retorno
   return (
     <div>
-      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} nome={nome} idade={idade} cidade={cidade} alterar={alterar} />
+      <Formulario btnCadastrar={btnCadastrar} setNome={setNome} setIdade={setIdade} setCidade={setCidade} cadastrar={cadastrar} nome={nome} idade={idade} cidade={cidade} alterar={alterar} remover={remover} />
       <Tabela vetor={vetor} selecionar={selecionar}/>
     </div>
   );
